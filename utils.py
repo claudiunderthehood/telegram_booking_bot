@@ -1,3 +1,3 @@
 telegram_bot_token = ""
 secret=""
-group_id = 000000000
+group_id = 000000
