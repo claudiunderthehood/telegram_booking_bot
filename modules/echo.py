@@ -19,7 +19,7 @@ def echo(update: Update, context: Context) -> None:
         last_command = user["data"]["last_command"]
         global p_chat_id
 
-        if last_command == "booking" or last_command == "upbook":
+        if last_command in {"booking", "upbook"}:
             p_chat_id = chat_id
             event = client.query(q.get(q.match(q.index("appointment_index"), p_chat_id)))
             client.query(q.update(q.ref(q.collection("Users"), user["ref"].id()), 
