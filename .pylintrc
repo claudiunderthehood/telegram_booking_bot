@@ -434,6 +434,14 @@ disable=raw-checker-failed,
         inconsistent-return-statements,
         missing-module-docstring,
         missing-function-docstring,
+        global-statement,
+        trailing-newlines,
+        trailing-newlines,
+        no-else-return,
+        redefined-outer-name,
+        global-variable-not-assigned,
+        consider-using-in,
+        duplicate-code,
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option
