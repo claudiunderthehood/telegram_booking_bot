@@ -19,7 +19,7 @@ def echo(update: Update, context: Context) -> None:
         last_command = user["data"]["last_command"]
         global p_chat_id
 
-        if last_command == "booking":
+        if last_command == "booking" or last_command == "upbook":
             p_chat_id = chat_id
             event = client.query(q.get(q.match(q.index("appointment_index"), p_chat_id)))
             client.query(q.update(q.ref(q.collection("Users"), user["ref"].id()), 
@@ -31,7 +31,7 @@ def echo(update: Update, context: Context) -> None:
             time = client.query(q.select("time", event["data"]))
             mobile = client.query(q.select("mobile", event["data"]))
             context.bot.send_message(group_id, "Band Name: " + str(name) + "\n\n" + "Instruments: " + str(instrument) + "\n\n" + "Time: " +
-                                     str(time) + "\n\n" + "Mobile number: " + str(mobile) + "\n\n" + "Client ID " + str(p_chat_id))
+                                     str(time) + "\n\n" + "Mobile number: " + str(mobile) + "\n\n" + "Client ID: " + str(p_chat_id))
             context.bot.send_message(group_id, "To confirm type '/accept <Client ID>' and to refuse '/refuse <Client ID>'")
             
 
