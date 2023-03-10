@@ -25,6 +25,10 @@ The projects runs with Python 3.8.10 or 3.9 and python-telegram-bot 13.7. You'll
 
 ## Usage
 
+Go to the "utils.py" file and put your telegram bot token that you generated from BotFather in "telegram_bot_token".
+In "secret" you need to type the faunadb token and in "group_id" the chat_id of the group or chat you want the bot to send the message.
+Of course if you want to use a group be sure to add the bot in it before running the script.
+
 To run the project open a terminal in the directory and run:
 
 ```
